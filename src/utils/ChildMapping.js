@@ -14,6 +14,7 @@ export function getChildMapping(children, mapFn) {
   if (children)
     Children.map(children, c => c).forEach((child) => {
       // run the map function here instead so that the key is the computed one
+      // TODO.briefy: figure out the above comment about computed key
       result[child.key] = mapper(child);
     });
   return result;
